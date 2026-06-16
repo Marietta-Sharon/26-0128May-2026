@@ -17,9 +17,103 @@
         </ul>
     </nav>
 </header>
+    <style>
+body{
+    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+}
+
+header{
+    text-align:center;
+    background:linear-gradient(to right,#00c6ff,#0072ff);
+    padding:20px;
+}
+
+nav{
+    text-align:center;
+    background-color:#111;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav li{
+    display:inline;
+    margin:0 15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:cyan;
+}
+
+section{
+    background-color:rgba(255,255,255,0.1);
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background-color:#00bcd4;
+    color:white;
+}
+
+tr:nth-child(even){
+    background-color:#d9edf7;
+    color:black;
+}
+
+tr:nth-child(odd){
+    background-color:#f2f2f2;
+    color:black;
+}
+
+.media-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.media-grid img,
+.media-grid video{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    background-color:#111;
+    text-align:center;
+    padding:15px;
+}
+</style>
 </head>
 <body>
-
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
     <header>
         <h1>ElectroTech Electronics</h1>
         <p>Your trusted source for modern electronic devices and accessories.</p>
@@ -73,31 +167,25 @@
     <hr>
 
     <section id="gallery">
-        <h2>Electronics Gallery</h2>
+    <h2>Electronics Gallery</h2>
 
-        <!-- Clickable Image -->
-        <a href="products.html">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"
-                 alt="Modern smartphone"
-                 width="300">
-        </a>
-        <p>Click the smartphone image to view more products.</p>
+    <div class="media-grid">
+
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"
+             alt="Modern smartphone">
 
         <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300"
-             alt="Laptop computer"
-             width="300">
+             alt="Laptop computer">
 
         <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=300"
-             alt="Smart television"
-             width="300">
+             alt="Smart television">
 
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300"
-             alt="Wireless headphones"
-             width="300">
+        <video controls>
+            <source src="videos/electronics-showcase.mp4" type="video/mp4">
+        </video>
 
-        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=300"
-             alt="Smart home electronics"
-             width="300">
+    </div>
+</section>
     </section>
     <section id="lists">
     <h2>Our Products and Services</h2>
@@ -155,7 +243,7 @@
     <section id="product-table">
     <h2>Available Electronic Products</h2>
 
-    <table border="1">
+   <table border="1" width="100%">
         <caption><strong>ElectroTech Product Catalog</strong></caption>
 
         <tr>
@@ -262,7 +350,15 @@
     <a href="https://www.samsung.com" target="_blank">Visit Samsung Electronics</a>
 
     <hr>
+<section>
+    <h2>Visit Our Partners</h2>
 
+    <p style="text-align:center;">
+        <a href="https://www.samsung.com" target="_blank">
+            Visit Samsung Electronics
+        </a>
+    </p>
+</section>
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: info@electrotech.com</p>
