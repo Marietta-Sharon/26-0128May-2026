@@ -1,37 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElectroTech Electronics Gallery</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+header{
+    background:linear-gradient(to right,#00c6ff,#0072ff);
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#111;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+nav ul li{
+    display:inline;
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+section{
+    margin:20px;
+    padding:20px;
+    background:rgba(255,255,255,0.1);
+    border-radius:12px;
+}
+
+h2{
+    text-align:center;
+    color:#00c6ff;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    height:250px;
+    border-radius:10px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+}
+
+.caption{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    text-align:center;
+    padding:10px;
+}
+
+/* IMAGE BACKGROUNDS */
+
+.phone{
+    background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800');
+}
+
+.laptop{
+    background-image:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800');
+}
+
+.tv{
+    background-image:url('https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800');
+}
+
+.headphones{
+    background-image:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800');
+}
+
+.watch{
+    background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800');
+}
+
+.gaming{
+    background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800');
+}
+
+iframe{
+    display:block;
+    margin:auto;
+    border:none;
+    border-radius:10px;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>ElectroTech Electronics Gallery</h1>
+    <p>Explore our collection of modern electronic devices and technology.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Services/Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
 <section>
-    <h2>Image Gallery</h2>
+    <h2>Electronics Image Gallery</h2>
 
     <div class="gallery-grid">
 
-        <figure>
-            <img src="images/smartphone.jpg" alt="Latest smartphone">
-            <figcaption>Latest smartphone with advanced camera technology.</figcaption>
-        </figure>
+        <div class="gallery-item phone">
+            <div class="caption">Latest Smartphone Technology</div>
+        </div>
 
-        <figure>
-            <img src="images/laptop.jpg" alt="Modern laptop">
-            <figcaption>High-performance laptop for work and entertainment.</figcaption>
-        </figure>
+        <div class="gallery-item laptop">
+            <div class="caption">Modern High-Performance Laptop</div>
+        </div>
 
-        <figure>
-            <img src="images/smarttv.jpg" alt="Smart television">
-            <figcaption>Ultra HD Smart TV with streaming capabilities.</figcaption>
-        </figure>
+        <div class="gallery-item tv">
+            <div class="caption">Ultra HD Smart Television</div>
+        </div>
 
-        <figure>
-            <img src="images/headphones.jpg" alt="Wireless headphones">
-            <figcaption>Wireless headphones with noise-cancellation features.</figcaption>
-        </figure>
+        <div class="gallery-item headphones">
+            <div class="caption">Wireless Headphones</div>
+        </div>
 
-        <figure>
-            <img src="images/smartwatch.jpg" alt="Smart watch">
-            <figcaption>Smartwatch for fitness tracking and notifications.</figcaption>
-        </figure>
+        <div class="gallery-item watch">
+            <div class="caption">Smart Watch for Everyday Use</div>
+        </div>
 
-        <figure>
-            <img src="images/gaming.jpg" alt="Gaming accessories">
-            <figcaption>Gaming accessories designed for enhanced performance.</figcaption>
-        </figure>
+        <div class="gallery-item gaming">
+            <div class="caption">Gaming Accessories</div>
+        </div>
 
     </div>
 </section>
+
+<section>
+    <h2>Featured Electronics Video</h2>
+
+    <iframe
+        width="640"
+        height="360"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        title="Electronics Showcase"
+        allowfullscreen>
+    </iframe>
+
+    <p style="text-align:center;">
+        Watch our featured electronics showcase demonstrating the latest gadgets and technology trends.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 ElectroTech Electronics. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
