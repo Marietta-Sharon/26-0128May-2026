@@ -1,1 +1,188 @@
+```css
+/* ELECTROTECH ELECTRONICS WEBSITE CSS */
+
+body{
+    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+    font-family:Arial, sans-serif;
+    margin:0;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    background:linear-gradient(to right,#00c6ff,#0072ff);
+    padding:20px;
+}
+
+header h1{
+    margin:0;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* NAVIGATION */
+
+nav{
+    text-align:center;
+    background-color:#111;
+    padding:15px;
+}
+
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:cyan;
+}
+
+/* SECTIONS */
+
+section{
+    background-color:rgba(255,255,255,0.1);
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+h2{
+    text-align:center;
+    color:#00c6ff;
+}
+
+h3{
+    color:#00c6ff;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table caption{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+th,
+td{
+    border:1px solid black;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background-color:#00bcd4;
+    color:white;
+}
+
+tr:nth-child(even){
+    background-color:#d9edf7;
+    color:black;
+}
+
+tr:nth-child(odd){
+    background-color:#f2f2f2;
+    color:black;
+}
+
+/* GALLERY */
+
+.media-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.media-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.media-grid iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    border-radius:10px;
+}
+
+/* AUDIO */
+
+audio{
+    width:100%;
+    margin-top:15px;
+}
+
+/* LINKS */
+
+a{
+    color:#00c6ff;
+}
+
+a:hover{
+    color:white;
+}
+
+/* CONTACT FORM */
+
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+input[type="submit"]{
+    background:#00c6ff;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+input[type="submit"]:hover{
+    background:#0072ff;
+}
+
+/* FOOTER */
+
+footer{
+    background-color:#111;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+```
 
