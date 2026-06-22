@@ -1,158 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <header>
-    <h1>ElectroTech Electronics</h1>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Services/Products</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectroTech Electronics</title>
-   
     <style>
-body{
-    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
-    color:white;
-    font-family:Arial, sans-serif;
-    margin:0;
-}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-header{
-    text-align:center;
-    background:linear-gradient(to right,#00c6ff,#0072ff);
-    padding:20px;
-}
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }
 
-nav{
-    text-align:center;
-    background-color:#111;
-    padding:15px;
-}
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            padding: 30px 20px;
+        }
+        header h1 { font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 8px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
 
-nav ul{
-    list-style:none;
-    margin:0;
-    padding:0;
-}
+        nav {
+            text-align: center;
+            background-color: #111;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 18px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover { background-color: cyan; color: #111; }
 
-nav li{
-    display:inline;
-    margin:0 15px;
-}
+        section {
+            background-color: rgba(255,255,255,0.08);
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 1100px;
+        }
+        section h2 {
+            margin-bottom: 15px;
+            color: #00c6ff;
+            font-size: 1.6rem;
+            border-bottom: 2px solid #0072ff;
+            padding-bottom: 8px;
+        }
+        section h3 { margin: 15px 0 8px; color: #7dd3fc; }
+        section p { line-height: 1.7; }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
+        article {
+            background: rgba(255,255,255,0.05);
+            border-left: 4px solid #00c6ff;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
 
-nav a:hover{
-    color:cyan;
-}
+        /* ── GALLERY GRID: 2 cols, auto rows ── */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
 
-section{
-    background-color:rgba(255,255,255,0.1);
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
-}
+        .media-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+            background: #1a3a5c;
+        }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-}
+        .media-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7dd3fc;
+            margin-top: 5px;
+        }
 
-th{
-    background-color:#00bcd4;
-    color:white;
-}
+        .grid-item { display: flex; flex-direction: column; }
 
-tr:nth-child(even){
-    background-color:#d9edf7;
-    color:black;
-}
+        /* 16:9 responsive video box */
+        .video-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #0a1628;
+        }
+        .video-box video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
 
-tr:nth-child(odd){
-    background-color:#f2f2f2;
-    color:black;
-}
+        /* ── TABLE ── */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        caption {
+            font-size: 1.1rem; font-weight: bold; padding: 12px;
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+            color: white; border-radius: 6px 6px 0 0;
+        }
+        th { background-color: #00bcd4; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px 12px; }
+        tr:nth-child(even) td { background-color: #d9edf7; color: black; }
+        tr:nth-child(odd) td { background-color: #f2f2f2; color: black; }
+        tr:hover td { background-color: #b3e5fc; color: black; }
 
-.media-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
+        ol, ul { padding-left: 22px; line-height: 2; }
+        ul ul { margin-top: 4px; }
 
-.media-grid img,
-.media-grid video{
-    width:100%;
-    border-radius:10px;
-}
+        audio { margin-top: 10px; width: 100%; }
 
-footer{
-    background-color:#111;
-    text-align:center;
-    padding:15px;
-}
-</style>
+        .iframe-wrapper {
+            position: relative; padding-top: 56.25%;
+            border-radius: 10px; overflow: hidden; margin-top: 12px;
+        }
+        .iframe-wrapper video {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; border-radius: 10px;
+        }
+
+        a { color: #00c6ff; }
+        a:hover { color: cyan; }
+        hr { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 10px 25px; }
+
+        footer { background-color: #111; text-align: center; padding: 20px; margin-top: 30px; color: #aaa; }
+
+        @media (max-width: 600px) {
+            .media-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 1.8rem; }
+            nav ul { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>ElectroTech Electronics</h1>
-        <p>Your trusted source for modern electronic devices and accessories.</p>
+<header>
+    <h1>ElectroTech Electronics</h1>
+    <p>Your trusted source for modern electronic devices and accessories.</p>
+</header>
 
-        
-    </header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Services/Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <hr>
+<hr>
 
-    <section id="home">
-        <h2>Welcome to ElectroTech Electronics</h2>
-        <p>
-            We provide information about the latest electronic gadgets,
-            including smartphones, laptops, televisions, headphones,
-            and smart home devices.
-        </p>
-    </section>
+<section id="home">
+    <h2>Welcome to ElectroTech Electronics</h2>
+    <p>We provide information about the latest electronic gadgets, including smartphones, laptops, televisions, headphones, and smart home devices.</p>
+</section>
 
-    <section id="purpose">
-        <h2>Purpose of the Website</h2>
-        <p>
-            The purpose of this website is to showcase various electronic
-            products, provide product information, and help customers
-            learn about modern technology. It serves as an online platform
-            where users can explore electronics and stay updated with
-            current technological trends.
-        </p>
-    </section>
+<section id="purpose">
+    <h2>Purpose of the Website</h2>
+    <p>The purpose of this website is to showcase various electronic products, provide product information, and help customers learn about modern technology. It serves as an online platform where users can explore electronics and stay updated with current technological trends.</p>
+</section>
 
-    <hr>
+<hr>
 
-    <section id="products">
-        <h2>Featured Electronics</h2>
+<section id="products">
+    <h2>Featured Electronics</h2>
+    <article><h3>Smartphones</h3><p>Discover the latest smartphones with advanced features.</p></article>
+    <article><h3>Laptops</h3><p>Explore powerful laptops for work, study, and gaming.</p></article>
+    <article><h3>Smart TVs</h3><p>Experience high-quality entertainment with smart televisions.</p></article>
+</section>
 
-        <article>
-            <h3>Smartphones</h3>
-            <p>Discover the latest smartphones with advanced features.</p>
-        </article>
+<hr>
 
-        <article>
-            <h3>Laptops</h3>
-            <p>Explore powerful laptops for work, study, and gaming.</p>
-        </article>
+<!-- GALLERY: 2 columns × 4 rows = 8 items (6 images + 2 videos) -->
+<section id="gallery">
+    <h2>Electronics Gallery</h2>
+    <div class="media-grid">
 
-        <article>
-            <h3>Smart TVs</h3>
-            <p>Experience high-quality entertainment with smart televisions.</p>
-        </article>
-   
+        <!-- Row 1 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop"
+                 alt="Circuit board close-up" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=Circuit+Board'">
+            <p class="media-caption">🔌 Circuit Board – How Electronics Are Built</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop"
+                 alt="Electronics matrix code" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=Electronics'">
+            <p class="media-caption">💻 Digital Electronics – Data Processing</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&auto=format&fit=crop"
+                 alt="Smartphone models" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=Smartphones'">
+            <p class="media-caption">📱 Smartphone Models – Latest Devices</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop"
+                 alt="Laptop computer" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=Laptop'">
+            <p class="media-caption">💼 Laptops – Portable Computing Power</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c228574b50?w=600&auto=format&fit=crop"
+                 alt="Computer components" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=PC+Components'">
+            <p class="media-caption">🖥️ PC Components – Inside a Computer</p>
+        </div>
+
+        <div class="grid-item">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop"
+                 alt="Headphones accessories" onerror="this.src='https://via.placeholder.com/600x220/0f3460/00c6ff?text=Headphones'">
+            <p class="media-caption">🎧 Audio Electronics – Headphones</p>
+        </div>
+
+        <!-- Row 4: Two Videos -->
+        <div class="grid-item">
+            <div class="video-box">
+                <video controls poster="">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+            <p class="media-caption">🔧 Electronics in Action – Engineering</p>
+        </div>
+
+        <div class="grid-item">
+            <div class="video-box">
+                <video controls>
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+            <p class="media-caption">📺 Smart Devices – Modern Technology</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="lists">
+    <h2>Our Products and Services</h2>
+    <h3>Ordering Procedure</h3>
+    <ol>
+        <li>Browse available electronic products.</li>
+        <li>Select the desired item.</li>
+        <li>Add the item to your cart.</li>
+        <li>Provide delivery information.</li>
+        <li>Complete payment.</li>
+        <li>Receive order confirmation.</li>
+    </ol>
+    <h3>Services We Offer</h3>
+    <ul>
+        <li>Electronic Product Sales</li>
+        <li>Technical Support</li>
+        <li>Device Installation</li>
+        <li>Warranty Assistance</li>
+        <li>Product Consultation</li>
+    </ul>
+    <h3>Product Categories</h3>
+    <ul>
+        <li>Laptops
+            <ul><li>Gaming Laptops</li><li>Business Laptops</li><li>Student Laptops</li></ul>
+        </li>
+        <li>Phones
+            <ul><li>Android Phones</li><li>iPhones</li><li>Budget Smartphones</li></ul>
+        </li>
+        <li>Accessories
+            <ul><li>Headphones</li><li>Smart Watches</li><li>Chargers</li><li>Phone Cases</li></ul>
+        </li>
+    </ul>
+</section>
+
+<section id="product-table">
+    <h2>Available Electronic Products</h2>
+    <table>
+        <caption><strong>ElectroTech Product Catalog</strong></caption>
+        <thead>
+            <tr>
+                <th>Product ID</th><th>Product Name</th><th>Category</th>
+                <th>Price (KES)</th><th>Availability</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>P001</td><td>Samsung Galaxy S24</td><td>Smartphone</td><td>95,000</td><td>In Stock</td></tr>
+            <tr><td>P002</td><td>HP Pavilion Laptop</td><td>Laptop</td><td>85,000</td><td>In Stock</td></tr>
+            <tr><td>P003</td><td>Sony Wireless Headphones</td><td>Accessories</td><td>15,000</td><td>In Stock</td></tr>
+            <tr><td>P004</td><td>Apple Watch Series 10</td><td>Smart Watch</td><td>55,000</td><td>Limited Stock</td></tr>
+            <tr><td>P005</td><td>LG Smart TV 55"</td><td>Television</td><td>75,000</td><td>Out of Stock</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="audio">
+    <h2>Background Music</h2>
+    <p>Enjoy this audio track while exploring our electronics products and services.</p>
+    <audio controls>
+        <source src="https://cdn.pixabay.com/download/audio/2022/02/19/audio_bc499a35fb.mp3?filename=mleckert82-beat-loop-by-marie-louise-janneman-21287.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</section>
+
+<section id="review-video">
+    <h2>Latest Technology and Electronics Review</h2>
+    <p>Watch this video to learn about the latest trends and innovations in electronics.</p>
+    <div class="iframe-wrapper">
+        <video controls>
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
+</section>
+
+<section>
+    <h2>Visit Our Partners</h2>
+    <p style="text-align:center;"><a href="https://www.samsung.com" target="_blank">Visit Samsung Electronics</a></p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@electrotech.com</p>
+    <p>Phone: +254 700 123 456</p>
+    <p>Location: Nairobi, Kenya</p>
+</section>
+
+<hr>
+
+<footer>
+    <p>&copy; 2026 ElectroTech Electronics. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
