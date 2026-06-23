@@ -5,136 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ElectroTech Electronics Gallery</title>
 
-<style>
-
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
-    color:white;
-}
-
-header{
-    background:linear-gradient(to right,#00c6ff,#0072ff);
-    text-align:center;
-    padding:20px;
-}
-
-nav{
-    background:#111;
-    padding:15px;
-}
-
-nav ul{
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-}
-
-nav ul li{
-    display:inline;
-    margin:0 15px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav ul li a:hover{
-    color:cyan;
-}
-
-section{
-    margin:20px;
-    padding:20px;
-    background:rgba(255,255,255,0.1);
-    border-radius:12px;
-}
-
-h2{
-    text-align:center;
-    color:#00c6ff;
-}
-
-/* IMAGE GALLERY */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.gallery-item{
-    height:250px;
-    border-radius:10px;
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:flex-end;
-}
-
-.caption{
-    background:rgba(0,0,0,0.7);
-    width:100%;
-    text-align:center;
-    padding:10px;
-}
-
-/* ELECTRONICS IMAGES */
-
-.phone{
-    background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800');
-}
-
-.laptop{
-    background-image:url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800');
-}
-
-.tv{
-    background-image:url('https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800');
-}
-
-.headphones{
-    background-image:url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800');
-}
-
-.watch{
-    background-image:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800');
-}
-
-.gaming{
-    background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800');
-}
-
-/* VIDEO GALLERY */
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.video-grid video{
-    width:100%;
-    border-radius:10px;
-}
-
-.video-caption{
-    text-align:center;
-    margin-top:10px;
-}
-
-footer{
-    background:#111;
-    text-align:center;
-    padding:15px;
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -193,31 +64,30 @@ footer{
 
         <div>
             <video controls>
-                <source src="https://cdn.pixabay.com/video/2022/10/18/135381-762261520_large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="videos/1.mp4" type="video/mp4">
+            
             </video>
             <p class="video-caption">Modern Technology and Electronics</p>
         </div>
 
         <div>
             <video controls>
-                <source src="https://cdn.pixabay.com/video/2020/09/14/49901-458739469_large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="videos/2.mp4" type="video/mp4">
             </video>
             <p class="video-caption">Digital Circuit Technology</p>
         </div>
 
         <div>
             <video controls>
-                <source src="https://cdn.pixabay.com/video/2021/08/26/86374-593341782_large.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="videos/4.mp4" type="video/mp4">
+           
             </video>
             <p class="video-caption">Computer Hardware and Electronics</p>
         </div>
 
         <div>
             <video controls>
-                <source src="https://cdn.pixabay.com/video/2021/10/03/90459-624284068_large.mp4" type="video/mp4">
+                <source src="videos/3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <p class="video-caption">Future Technology Innovations</p>
