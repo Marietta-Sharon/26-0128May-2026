@@ -1,5 +1,9 @@
 ```javascript
 window.onload = function () {
+    alert("🎉 Welcome to ElectroTech Electronics!");
+};
+
+window.onload = function () {
 
     let name = prompt("Welcome to ElectroTech Electronics! Please enter your name:");
 
