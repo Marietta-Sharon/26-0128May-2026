@@ -1,188 +1,308 @@
-```css
 /* ELECTROTECH ELECTRONICS WEBSITE CSS */
-
-body{
-    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
-    color:white;
-    font-family:Arial, sans-serif;
-    margin:0;
+body {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 /* HEADER */
-
-header{
-    text-align:center;
-    background:linear-gradient(to right,#00c6ff,#0072ff);
-    padding:20px;
+header {
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 20px;
 }
-
-header h1{
-    margin:0;
+header h1 {
+    margin: 0;
 }
-
-header p{
-    margin-top:10px;
+header p {
+    margin-top: 10px;
 }
 
 /* NAVIGATION */
-
-nav{
-    text-align:center;
-    background-color:#111;
-    padding:15px;
+nav {
+    text-align: center;
+    background-color: #111;
+    padding: 15px;
 }
-
-nav ul{
-    list-style:none;
-    margin:0;
-    padding:0;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-
-nav ul li{
-    display:inline-block;
-    margin:0 15px;
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    font-size:18px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
-
-nav ul li a:hover{
-    color:cyan;
+nav ul li a:hover {
+    color: cyan;
 }
 
 /* SECTIONS */
-
-section{
-    background-color:rgba(255,255,255,0.1);
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }
-
-h2{
-    text-align:center;
-    color:#00c6ff;
+h2 {
+    text-align: center;
+    color: #00c6ff;
 }
-
-h3{
-    color:#00c6ff;
+h3 {
+    color: #00c6ff;
 }
 
 /* TABLE */
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
-
-table caption{
-    font-size:20px;
-    margin-bottom:10px;
+table caption {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
-
-th,
-td{
-    border:1px solid black;
-    padding:12px;
-    text-align:center;
+th, td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
 }
-
-th{
-    background-color:#00bcd4;
-    color:white;
+th {
+    background-color: #00bcd4;
+    color: white;
 }
-
-tr:nth-child(even){
-    background-color:#d9edf7;
-    color:black;
+tr:nth-child(even) {
+    background-color: #d9edf7;
+    color: black;
 }
-
-tr:nth-child(odd){
-    background-color:#f2f2f2;
-    color:black;
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    color: black;
 }
 
 /* GALLERY */
-
-.media-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
-
-.media-grid img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:10px;
+.media-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
-
-.media-grid iframe{
-    width:100%;
-    height:300px;
-    border:none;
-    border-radius:10px;
+.media-grid iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+.video-box video {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 /* AUDIO */
-
-audio{
-    width:100%;
-    margin-top:15px;
+audio {
+    width: 100%;
+    margin-top: 15px;
 }
 
 /* LINKS */
-
-a{
-    color:#00c6ff;
+a {
+    color: #00c6ff;
+}
+a:hover {
+    color: white;
 }
 
-a:hover{
-    color:white;
+/* CONTACT FORM — global input styles */
+form {
+    max-width: 500px;
+    margin: auto;
 }
-
-/* CONTACT FORM */
-
-form{
-    max-width:500px;
-    margin:auto;
-}
-
 input,
 textarea,
-select{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:5px;
-    box-sizing:border-box;
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
-
-input[type="submit"]{
-    background:#00c6ff;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
+input[type="submit"] {
+    background: #00c6ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
-
-input[type="submit"]:hover{
-    background:#0072ff;
+input[type="submit"]:hover {
+    background: #0072ff;
 }
 
 /* FOOTER */
-
-footer{
-    background-color:#111;
-    text-align:center;
-    padding:15px;
-    margin-top:20px;
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
-```
 
+/* ================================================
+   MODAL POPUP STYLES — kept at bottom to override
+   ================================================ */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modalBox {
+    background: #1a1a2e;
+    border: 2px solid #00c6ff;
+    padding: 35px 40px;
+    border-radius: 14px;
+    width: 430px;
+    max-width: 92%;
+    box-shadow: 0 10px 40px rgba(0, 198, 255, 0.3);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+}
+
+.modalBox h2 {
+    color: #00c6ff;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modalBox p {
+    color: white;
+    font-size: 14px;
+    margin: 6px 0;
+    text-align: left;
+}
+
+.modalBox hr {
+    border: none;
+    border-top: 1px solid #00c6ff;
+    margin: 14px 0;
+}
+
+.modalBox label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #00c6ff;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+/* Override global input/select styles inside modal */
+.modalBox input[type="text"],
+.modalBox input[type="email"],
+.modalBox input[type="tel"],
+.modalBox select {
+    width: 100% !important;
+    padding: 9px 11px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border: 1px solid #00c6ff !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    background: #0f2027 !important;
+    color: white !important;
+}
+
+.modalBox input[type="text"]:focus,
+.modalBox input[type="email"]:focus,
+.modalBox input[type="tel"]:focus,
+.modalBox select:focus {
+    outline: 2px solid #00c6ff !important;
+    background: #0f3460 !important;
+}
+
+/* Modal select dropdown option colors */
+.modalBox select option {
+    background: #0f2027;
+    color: white;
+}
+
+/* OK Button (Step 1) */
+#okBtn {
+    background-color: #00c6ff;
+    color: #000;
+    padding: 11px 35px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 18px;
+    display: block;
+    width: 100%;
+}
+#okBtn:hover {
+    background-color: #0072ff;
+    color: white;
+}
+
+/* Submit Button (Step 2) */
+#submitBtn {
+    background-color: #00c6ff;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-right: 10px;
+}
+#submitBtn:hover {
+    background-color: #0072ff;
+    color: white;
+}
+
+/* Close Button (Step 2) */
+#closeBtn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 18px;
+}
+#closeBtn:hover {
+    background-color: #c0392b;
+}
