@@ -3,10 +3,10 @@
 // ==========================
 
 const SUPABASE_URL =
-"https://hwtacftknovfowmpjdsk.supabase.co/";
+"https://ybunqlcevxopdfkayrxf.supabase.co/";
 
 const SUPABASE_ANON_KEY =
-"sb_publishable_E7NYLYWiGKVU_fG_9lYbjw_IbSm4NVG";
+"sb_publishable_mfMgA90hEANU1_4BYSCc6A_fuYJIc3I";
 
 const client = supabase.createClient(
     SUPABASE_URL,
@@ -44,7 +44,7 @@ document
 
         const { data, error } =
         await client
-        .from("table1")
+        .from("records")
         .insert([
             {
                 username: username,
