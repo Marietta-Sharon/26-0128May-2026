@@ -18,7 +18,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   status.textContent = "Submitting...";
 
-  const { error } = await client.from("contacts").insert([
+  const { error } = await client.from("info").insert([
     { name, email, phone, gender }
   ]);
 
