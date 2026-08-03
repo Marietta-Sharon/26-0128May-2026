@@ -123,7 +123,7 @@ async function handleSubmit() {
 
                 email: email,
 
-                "phone number": phone,
+                "phone": phone,
 
                 gender: gender
 
